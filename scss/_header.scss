@@ -1,0 +1,24 @@
+header { 
+    @extend .header;
+    div {
+        & > a.headerName {
+            @include headerFontStyle;
+            font-size: 25px;
+            &:hover {
+                color:$headerHoverColor;
+            }
+        }
+        ul#headerLinks {
+            margin-right: 15px;
+            > li {
+                & > a {
+                    @include headerFontStyle;
+                    font-size: 13px;
+                    &:hover {
+                        background-color:$headerHoverColor;
+                    } 
+                }   
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@mixin headerFontStyle {
+    text-transform: uppercase;
+    font-family: $font;
+    color: $headerTextColor;
+}
+
+@mixin Icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #e84c3d;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 70px;
+}
+
+@mixin greyBlockTextStyle {
+    font-family: $font;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+@mixin headerFont {				
+    color: $greyBlockHeaderColor;
+    text-transform: uppercase;
+    font-size: 21px;
+    font-family: $font;
+}
+
+
+@mixin moreLink{
+    text-decoration: none;
+    @include greyBlockTextStyle;
+    color: $greyBlockLincColor;	
+    &:hover {
+    	background-color: $greyBlockLincColor;
+        color: $whiteColor;
+        border-radius:3px;
+        transition: 0.3s;
+    }
+}
